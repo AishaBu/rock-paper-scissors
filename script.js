@@ -3,8 +3,8 @@
 function getComputerChoice(){
     const answerChoices = ['rock', 'paper', 'scissors'];
 
-    let randNum = Math.floor(Math.random() * answerChoices.length); //generates random number that corresponds with a string
-    let computerRandomChoice = answerChoices[randNum]; //uses random number and connects it to array to pick a string.
+    let randNum = Math.floor(Math.random() * answerChoices.length); //picks random number up to length of array.
+    let computerRandomChoice = answerChoices[randNum]; //connects random number and array to pick a random string.
     return computerRandomChoice;
 } 
 
