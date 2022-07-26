@@ -34,6 +34,9 @@ function playRound(playerSelection, computerSelection){
     console.log('Player Choice: ' + playerSelection);
     console.log('Computer Choice: ' + computerSelection);
 
+    //delcare display game message
+    let gameResultMessage = document.getElementById('gameResultMessage');
+
 
      //Track round being played
      if(round === 5) {
@@ -52,7 +55,10 @@ function playRound(playerSelection, computerSelection){
         //show as final scores
         finalUserScoresPara.innerHTML =  'Final Player Score: '+ userScore;
         finalCompScoresPara.innerHTML = 'Final Computer Score: '+ computerScore;
-        return 'GAME OVER';
+
+        //display game result message
+       return  gameResultMessage.innerHTML = 'GAME OVER';
+       
     }
 
     //If it's a tie
@@ -65,7 +71,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'It\'s a tie!';
+        return gameResultMessage.innerHTML = 'It\'s a tie!';
         
     }
         //Player Picks Rock
@@ -77,7 +83,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'Computer wins, paper covers rock!';
+        return gameResultMessage.innerHTML ='Computer wins, paper covers rock!';
     } 
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
         userScore++;
@@ -87,7 +93,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'You win, rock smashes scissors!';
+        return gameResultMessage.innerHTML = 'You win, rock smashes scissors!';
     }
 
     //Player Picks Paper
@@ -99,7 +105,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'You win, paper covers rock!';
+        return gameResultMessage.innerHTML = 'You win, paper covers rock!';
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors'){
         computerScore++;
@@ -109,7 +115,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'The computer wins, scissors cuts paper!';
+        return gameResultMessage.innerHTML =  'The computer wins, scissors cuts paper!';
     }
 
     //Player Picks Scissors
@@ -121,7 +127,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'The computer wins, rock smashes scissors!';
+        return gameResultMessage.innerHTML = 'The computer wins, rock smashes scissors!';
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
         userScore++;
@@ -131,28 +137,33 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
-        return 'You win, scissors cuts paper!';
+        return gameResultMessage.innerHTML = 'You win, scissors cuts paper!';
     }
 
 }
 
-
     //Keep score of computer and numbers wins 
     function keepScore(){
+        //will display final winner message
+        let finalWinnerMessage = document.getElementById('finalWinnerMessage');
+
         if(userScore == computerScore){
             console.log('Final Player Score: '+ userScore);
             console.log('Final Computer Score: '+ computerScore);
             console.log('You both win!');
+            return finalWinnerMessage.innerHTML = 'You both win!';
         }
         else if (userScore > computerScore){
             console.log('Final Player Score: '+ userScore);
             console.log('Final Computer Score: '+ computerScore);
             console.log('Nice! You Won!');
+           return finalWinnerMessage.innerHTML = 'Nice! You Won!';
         }
         else if(userScore < computerScore){
             console.log('Final Player Score: '+ userScore);
             console.log('Final Computer Score: '+ computerScore);
             console.log('Aww, the computer won!');
+            return finalWinnerMessage.innerHTML = 'Aww, the computer won!';
         }
 }
 
@@ -211,9 +222,7 @@ function playRound(playerSelection, computerSelection){
             location.reload(); //reloads the browser and removes console logs
         })
 
-        rpsBtn.addEventListener('click', game);
-       
-
+        rpsBtn.addEventListener('click', game); 
     }
 
 
