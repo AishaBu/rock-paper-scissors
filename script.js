@@ -10,11 +10,24 @@ function getComputerChoice(){
 
 let userScore = parseInt(0);
 let computerScore = parseInt(0);
+let round = parseInt(0); 
 
+//JS DOM Methods
+let roundspara = document.querySelector('#roundspara');
+    
 //Play a round of game function
 function playRound(playerSelection, computerSelection){ 
+
+//Track round being played
+    if(round === 4) {
+        console.log('GAME OVER');
+        keepScore();
+        return 'GAME FINAL';
+    }
     
     //Write choices to console
+    roundspara.append('Round: '+ round);
+    console.log('Round: '+ round);
     console.log('Player Choice: ' + playerSelection);
     console.log('Computer Choice: ' + computerSelection);
 
@@ -22,20 +35,24 @@ function playRound(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
         userScore++;
         computerScore++; 
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Computer Choice: ' + computerScore);
+
         return 'It\'s a tie!';
         
     }
         //Player Picks Rock
     else if(playerSelection === 'rock' && computerSelection === 'paper'){
         computerScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'Computer wins, paper covers rock!';
     } 
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
         userScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'You win, rock smashes scissors!';
@@ -44,12 +61,14 @@ function playRound(playerSelection, computerSelection){
     //Player Picks Paper
     else if(playerSelection === 'paper' &&  computerSelection === 'rock'){
         userScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'You win, paper covers rock!';
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors'){
         computerScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'The computer wins, scissors cuts paper!';
@@ -58,18 +77,21 @@ function playRound(playerSelection, computerSelection){
     //Player Picks Scissors
      else if(playerSelection === 'scissors' && computerSelection === 'rock'){
         computerScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'The computer wins, rock smashes scissors!';
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
         userScore++;
+        round++
         console.log('Current Player Score: ' + userScore);
         console.log('Current Computer Score: ' + computerScore);
         return 'You win, scissors cuts paper!';
     }
-   
+
 }
+
 
 //Keep score of computer and numbers wins 
 function keepScore(){
@@ -91,21 +113,34 @@ function keepScore(){
 }
 
 
-
 //Game function, runs entire game
     function game(){
-
-    for(let round = 0; round < 5; round++){
-        console.log('Round: '+ round);
         const computerSelection = getComputerChoice();
-        let playerSelection = prompt('Please choose Rock, Paper, or Scissors').toLowerCase(); //converts entire response to lowercase then does comparison
         console.log(playRound(playerSelection, computerSelection)); 
-    
-        if(round === 4) {
-                console.log('GAME OVER');
-                keepScore();
-            } 
+    }   
 
-        }  
-    }
-     game();
+
+    // Rock, Paper, Scissor Buttons
+    const rockBtn = document.getElementById('rock');
+    const paperBtn = document.getElementById('paper');
+    const scissorsBtn = document.getElementById('scissors');
+    const rpsBtn = document.querySelector('.buttons');
+
+    //Call Event Listeners
+    rockBtn.addEventListener('click', () => {
+        return playerSelection = 'rock';
+     })
+
+
+    paperBtn.addEventListener('click', () => {
+        return playerSelection = 'paper'; 
+    })
+        
+    scissorsBtn.addEventListener('click', () => {
+        return playerSelection = 'scissors'; 
+    })
+        
+    rpsBtn.addEventListener('click', game);
+ 
+       
+    
