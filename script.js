@@ -18,7 +18,7 @@ let roundspara = document.querySelector('#roundspara');
 //Play a round of game function
 function playRound(playerSelection, computerSelection){ 
 
-//Track round being played
+    //Track round being played
     if(round === 4) {
         console.log('GAME OVER');
         keepScore();
@@ -93,7 +93,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 
-//Keep score of computer and numbers wins 
+    //Keep score of computer and numbers wins 
 function keepScore(){
     if(userScore == computerScore){
         console.log('Final Player Score: '+ userScore);
@@ -113,7 +113,7 @@ function keepScore(){
 }
 
 
-//Game function, runs entire game
+    //Game function, runs entire game
     function game(){
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection)); 
@@ -125,6 +125,7 @@ function keepScore(){
     const paperBtn = document.getElementById('paper');
     const scissorsBtn = document.getElementById('scissors');
     const rpsBtn = document.querySelector('.buttons');
+
 
     //Call Event Listeners
     rockBtn.addEventListener('click', () => {
