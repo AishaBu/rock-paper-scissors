@@ -1,4 +1,12 @@
 
+*, *::before, *::after{
+    /*Resets everything to 0 universally*/
+       border: 0;
+       padding: 0;
+       margin: 0;  
+       box-sizing: border-box;
+    }
+
 body, html{
     height: 100%;
 }
