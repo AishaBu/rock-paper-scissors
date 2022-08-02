@@ -179,7 +179,12 @@ footer a:hover{
     .currentFinalScoresChoices, .finalScores, .showChoices{
        gap: 5px;
     }
+
+     #playAgainBtn, #gameOverMessage, #finalWinnerMessage{
+        margin: 5px;
+    }
 }
+
 
 /*At least 772px and above*/
 @media(min-width: 772px){
