@@ -17,8 +17,8 @@ body{
     flex: 1 0 auto;
 
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -146,5 +146,21 @@ footer a:hover{
     color: bisque;
 }
 
-                                                                /**MEDIA QUERIES**/
-                    
+
+
+                                                                        /**MEDIA QUERIES**/
+
+/*At least 553px and less*/
+@media(max-width: 553px){
+
+    .buttons img{
+      min-width: auto;
+      height: 120px;
+      padding: 10px;
+    }
+
+    .buttons img:hover{
+        margin: 5px;
+    }    
+
+}
