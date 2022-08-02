@@ -166,13 +166,13 @@ function playRound(playerSelection, computerSelection){
             console.log('Final Player Score: '+ userScore);
             console.log('Final Computer Score: '+ computerScore);
             console.log('Nice! You Won!');
-           return finalWinnerMessage.innerHTML = 'Nice! You Won!';
+           return finalWinnerMessage.innerHTML = 'Nice! You Win!';
         }
         else if(userScore < computerScore){
             console.log('Final Player Score: '+ userScore);
             console.log('Final Computer Score: '+ computerScore);
             console.log('Aww, the computer won!');
-            return finalWinnerMessage.innerHTML = 'Aww, the computer won!';
+            return finalWinnerMessage.innerHTML = 'Aww, the computer wins!';
         }
 }
 
