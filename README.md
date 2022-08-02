@@ -1,5 +1,11 @@
 # Rock, Paper, Scissors Game
 
+<table>
+    <tr>
+    <td><img src="./rps-images/readmefile-desktop.png"></td>
+    </tr>
+</table>
+
 ### Description
 This rock, paper, scissors game was made for the Rock, Paper, Scissors assignment in the Odin Project. The assignment deliverables where to make a rock paper scissors game using HTML, CSS, and JavaScript. While creating this game, I practiced DOM manipulation using JavaScript, and got a better understanding of scope and the use of functions and the return keyword in JavaScript. 
 
