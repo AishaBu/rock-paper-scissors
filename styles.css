@@ -45,7 +45,6 @@ body{
 }
 
 .currentFinalScoresChoices, .heading, #roundsPara{
-    font-weight: lighter;
     color: rgb(19, 10, 10);
 }
 
@@ -169,6 +168,10 @@ footer a:hover{
 
     .buttons img:hover{
         margin: 5px;
-    }    
+    }   
+    
+    #roundsPara{
+        margin-bottom: 80px;
+    }
 
 }
