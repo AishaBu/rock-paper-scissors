@@ -23,7 +23,6 @@ function playRound(playerSelection, computerSelection){
 
      //Show round on console
      roundsPara.innerHTML = 'Round: '+ round;
-     console.log('Round: '+ round);
    
     //show player and computer choice
     const playerChoice = document.getElementById('playerChoice');
@@ -31,8 +30,6 @@ function playRound(playerSelection, computerSelection){
 
     playerChoice.innerHTML = 'Player Choice: ' + playerSelection;
     computerChoice.innerHTML = 'Computer Choice: ' + computerSelection;
-    console.log('Player Choice: ' + playerSelection);
-    console.log('Computer Choice: ' + computerSelection);
 
     //declare display game message
     let gameResultMessage = document.getElementById('gameResultMessage');
@@ -67,9 +64,7 @@ function playRound(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
         userScore++;
         computerScore++; 
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -80,9 +75,7 @@ function playRound(playerSelection, computerSelection){
         //Player Picks Rock
     else if(playerSelection === 'rock' && computerSelection === 'paper'){
         computerScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -91,9 +84,7 @@ function playRound(playerSelection, computerSelection){
     } 
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
         userScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -104,9 +95,7 @@ function playRound(playerSelection, computerSelection){
     //Player Picks Paper
     else if(playerSelection === 'paper' &&  computerSelection === 'rock'){
         userScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -115,9 +104,7 @@ function playRound(playerSelection, computerSelection){
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors'){
         computerScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -128,9 +115,7 @@ function playRound(playerSelection, computerSelection){
     //Player Picks Scissors
      else if(playerSelection === 'scissors' && computerSelection === 'rock'){
         computerScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -139,9 +124,7 @@ function playRound(playerSelection, computerSelection){
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
         userScore++;
-        round++
-        console.log('Current Player Score: ' + userScore);
-        console.log('Current Computer Score: ' + computerScore);
+        round++;
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
@@ -157,21 +140,15 @@ function playRound(playerSelection, computerSelection){
         let finalWinnerMessage = document.getElementById('finalWinnerMessage');
 
         if(userScore == computerScore){
-            console.log('Final Player Score: '+ userScore);
-            console.log('Final Computer Score: '+ computerScore);
-            console.log('You both win!');
+
             return finalWinnerMessage.innerHTML = 'You both win!';
         }
         else if (userScore > computerScore){
-            console.log('Final Player Score: '+ userScore);
-            console.log('Final Computer Score: '+ computerScore);
-            console.log('Nice! You Won!');
+            
            return finalWinnerMessage.innerHTML = 'Nice! You Win!';
         }
         else if(userScore < computerScore){
-            console.log('Final Player Score: '+ userScore);
-            console.log('Final Computer Score: '+ computerScore);
-            console.log('Aww, the computer won!');
+            
             return finalWinnerMessage.innerHTML = 'Aww, the computer wins!';
         }
 }
@@ -179,7 +156,7 @@ function playRound(playerSelection, computerSelection){
     //Game function, runs entire game
     function game(){
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection)); 
+       playRound(playerSelection, computerSelection); 
     }   
 
 
