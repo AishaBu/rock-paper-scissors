@@ -57,7 +57,6 @@ function playRound(playerSelection, computerSelection){
         choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
 
         //remove game regular result message and display game result message
-        choiceMessage.style.display = 'none';
         gameResultMessage.style.display = 'none';
        return  gameOverMessage.innerHTML = 'GAME OVER';
        
@@ -134,7 +133,6 @@ function playRound(playerSelection, computerSelection){
         choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'You win, scissors cuts paper!';
     }
-
 }
 
     //Keep score of computer and numbers wins 
