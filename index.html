@@ -9,37 +9,63 @@
     <!-- External JS& CSS Link Here-->
     <script src="./script.js" defer></script>
     <link href="/styles.css" rel="stylesheet" defer>
+
+    <!--Google Fonts Embedded-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <p> Choose Rock, Paper, Scissors</p>
-
-   <div class="scoreAndRoundsMessage">
-        <p id="roundsPara"></p>    
-
-        <div class="showChoices">
-            <p id="playerChoice"></p>    
-            <p id="computerChoice"></p> 
-        </div>
-
-        <div class="userAndCompScores">
-            <p id="userScoresPara"></p> 
-            <p id="compScoresPara"></p> 
-        </div>
-
-        <div class="finalScores">
-            <p id="finalUserScoresPara"></p> 
-            <p id="finalCompScoresPara"></p>
-        </div>
-
-        <p id="gameResultMessage"></p>
-        <p id="finalWinnerMessage"></p>
+    <div class="heading">
+        <h1>Rock Paper Scissors</h1>
+        <p> When you play a game against a computer, who will win?</p>
+        <p>Play 5 rounds to find out!</p>
+        <p>Choose Rock, Paper, or Scissors</p>
     </div>
 
-    <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+<div class="content">
+
+    <div class="scoresRoundsChoices">
+        <p id="roundsPara"></p> 
+    
+        <div class="currentFinalScoresChoices">
+            <div class="userAndCompScores">
+                <p id="userScoresPara"></p> 
+                <p id="compScoresPara"></p> 
+
+                <div class="finalScores">
+                    <p id="finalUserScoresPara"></p> 
+                    <p id="finalCompScoresPara"></p>
+                </div>
+            </div>
+
+            <div class="showChoices">
+                <p id="playerChoice"></p>    
+                <p id="computerChoice"></p> 
+             </div>
+        </div>
+
+        <div class="buttons">
+            <button id="rock"><img src="./rps-images/rocks.png" alt="rock button"></button>
+            <button id="paper"><img src="./rps-images/paper.png" alt="paper button"></button>
+            <button id="scissors"><img src="./rps-images/scissors.png" alt="scissors button"></button>
+        </div>
+
+        <div class="displayMessages">
+            <p id="choiceMessage"></p>
+            <p id="gameResultMessage"></p>
+            <p id="finalWinnerMessage"></p>
+        </div>
     </div>
+
+    <button id="playAgainBtn">Play Again</button>
+
+</div>
 </body>
+
+<footer>
+    <p>Github @AishaBu</p>
+</footer>
+
 </html>

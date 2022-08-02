@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection){
     console.log('Player Choice: ' + playerSelection);
     console.log('Computer Choice: ' + computerSelection);
 
-    //delcare display game message
+    //declare display game message
     let gameResultMessage = document.getElementById('gameResultMessage');
 
 
@@ -48,13 +48,15 @@ function playRound(playerSelection, computerSelection){
         userScoresPara.style.display = 'none';
         compScoresPara.style.display = 'none';
 
-         // delcare final player and computer scores
+         // declare final player and computer scores
         const finalUserScoresPara = document.getElementById('finalUserScoresPara');
         const finalCompScoresPara = document.getElementById('finalCompScoresPara');
+        const choiceMessage = document.getElementById('choiceMessage');
 
-        //show as final scores
+        //display as final scores and display final choices message
         finalUserScoresPara.innerHTML =  'Final Player Score: '+ userScore;
         finalCompScoresPara.innerHTML = 'Final Computer Score: '+ computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
 
         //display game result message
        return  gameResultMessage.innerHTML = 'GAME OVER';
@@ -71,6 +73,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'It\'s a tie!';
         
     }
@@ -83,6 +86,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML ='Computer wins, paper covers rock!';
     } 
     else if(playerSelection === 'rock' && computerSelection === 'scissors'){
@@ -93,6 +97,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'You win, rock smashes scissors!';
     }
 
@@ -105,6 +110,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'You win, paper covers rock!';
     }
     else if(playerSelection === 'paper' && computerSelection === 'scissors'){
@@ -115,6 +121,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML =  'The computer wins, scissors cuts paper!';
     }
 
@@ -127,6 +134,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'The computer wins, rock smashes scissors!';
     }
     else if(playerSelection === 'scissors' && computerSelection === 'paper'){
@@ -137,6 +145,7 @@ function playRound(playerSelection, computerSelection){
 
         userScoresPara.innerHTML = 'Player Score: ' + userScore;
         compScoresPara.innerHTML = 'Computer Score: ' + computerScore;
+        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
         return gameResultMessage.innerHTML = 'You win, scissors cuts paper!';
     }
 
@@ -173,31 +182,23 @@ function playRound(playerSelection, computerSelection){
         console.log(playRound(playerSelection, computerSelection)); 
     }   
 
-    //Disable/Enable buttons function
-    function disableBtns(){
-        rockBtn.disabled = true;
-        paperBtn.disabled = true;
-        scissorsBtn.disabled = true;
-    }
 
-    function enableBtns(){
-        rockBtn.disabled = false;
-        paperBtn.disabled = false;
-        scissorsBtn.disabled = false;
-    }
+    // Declare Rock, Paper, Scissors Buttons
+    const rockBtn = document.getElementById('rock');
+    const paperBtn = document.getElementById('paper');
+    const scissorsBtn = document.getElementById('scissors');
+    const rpsBtn = document.querySelector('.buttons');
 
-   
-    //Button restarts game function
+
+
+    //Button resets and restarts game button function
     function playAgain(){
+        const playAgainBtn = document.getElementById('playAgainBtn');
 
-        const playAgainBtn = document.createElement('button');
-        playAgainBtn.innerHTML = "Play Again";
-
-        playAgainBtn.setAttribute('class', 'playAgainBtn');
-        document.body.append(playAgainBtn);
+        //initially shows play again button when 5 rounds
+        playAgainBtn.style.display = 'inline-block';
 
         playAgainBtn.addEventListener('click',() => {
-            enableBtns();
             playAgainBtn.style.display = 'none';
 
             //reset global variables
@@ -221,18 +222,13 @@ function playRound(playerSelection, computerSelection){
 
             location.reload(); //reloads the browser and removes console logs
         })
-
-        rpsBtn.addEventListener('click', game); 
     }
 
-
-
- // Rock, Paper, Scissors Buttons
-    const rockBtn = document.getElementById('rock');
-    const paperBtn = document.getElementById('paper');
-    const scissorsBtn = document.getElementById('scissors');
-    const rpsBtn = document.querySelector('.buttons');
-
+     //Disable buttons functions
+     function disableBtns(){
+         rpsBtn.style.opacity = '20%';
+         rpsBtn.style.pointerEvents = 'none';
+     }
 
     //Call Event Listeners
     rockBtn.addEventListener('click', () => {
