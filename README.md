@@ -2,8 +2,25 @@
 
 <table>
     <tr>
-    <td><img src="./rps-images/readmefile-desktop.png"></td>
+    <td><img src="./rps-images/readmefile-desktopone.png"></td>
     </tr>
+</table>
+
+### Desktop Devices
+<table>
+    <tr>
+    <td><img src="./rps-images/readmefile-desktoptwo.png"></td>
+     <td><img src="./rps-images/readmefile-desktopthree.png"></td>
+     </tr>
+</table>
+
+### Mobile Devices
+<table>
+    <tr>
+    <td><img src="./rps-images/readmefile-mobileone.png"></td>
+     <td><img src="./rps-images/readmefile-mobiletwo.png"></td>
+      <td><img src="./rps-images/readmefile-mobilethree.png"></td>
+     </tr>
 </table>
 
 ### Description
