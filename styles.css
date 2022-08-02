@@ -84,7 +84,9 @@ body{
     font-size: 40px;
 }
 
-
+.currentFinalScoresChoices, .finalScores, .showChoices{
+    text-align: left;
+}
 
 
 /*From JavaScript*/
@@ -173,5 +175,10 @@ footer a:hover{
     #roundsPara{
         margin-bottom: 80px;
     }
+
+    .currentFinalScoresChoices, .finalScores, .showChoices{
+       gap: 5px;
+    }
+    
 
 }
