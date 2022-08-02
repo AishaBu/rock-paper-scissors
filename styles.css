@@ -36,6 +36,11 @@ body{
     margin: 3px;
 }
 
+.currentFinalScoresChoices, .heading, #roundsPara{
+    font-weight: lighter;
+    color: rgb(19, 10, 10);
+}
+
 .currentFinalScoresChoices{
     display: flex;
    justify-content: space-around;
@@ -47,11 +52,31 @@ body{
 
 #choiceMessage{
     font-size: 20px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: black;
+    
 }
 
 #gameResultMessage, #finalWinnerMessage{
+    font-family: 'Mouse Memoirs', sans-serif;
+    text-shadow: 2px 2px whitesmoke;
+    color:black;
+}
+
+#gameResultMessage{
     font-size: 30px;
 }
+
+#gameOverMessage{
+    font-size: 30px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color:rgb(63, 61, 61);
+}
+
+ #finalWinnerMessage{
+    font-size: 40px;
+}
+
 
 
 

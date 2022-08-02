@@ -31,8 +31,9 @@ function playRound(playerSelection, computerSelection){
     playerChoice.innerHTML = 'Player Choice: ' + playerSelection;
     computerChoice.innerHTML = 'Computer Choice: ' + computerSelection;
 
-    //declare display game message
+    //declare display game  and game over message
     let gameResultMessage = document.getElementById('gameResultMessage');
+    let gameOverMessage = document.getElementById('gameOverMessage');
 
 
      //Track round being played
@@ -55,8 +56,10 @@ function playRound(playerSelection, computerSelection){
         finalCompScoresPara.innerHTML = 'Final Computer Score: '+ computerScore;
         choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
 
-        //display game result message
-       return  gameResultMessage.innerHTML = 'GAME OVER';
+        //remove game regular result message and display game result message
+        choiceMessage.style.display = 'none';
+        gameResultMessage.style.display = 'none';
+       return  gameOverMessage.innerHTML = 'GAME OVER';
        
     }
 
