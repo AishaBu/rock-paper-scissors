@@ -6,7 +6,7 @@
     </tr>
 </table>
 
-### Desktop Devices
+#### Desktop Devices
 <table>
     <tr>
     <td><img src="./rps-images/readmefile-desktoptwo.png"></td>
@@ -14,7 +14,7 @@
      </tr>
 </table>
 
-### Mobile Devices
+#### Mobile Devices
 <table>
     <tr>
     <td><img src="./rps-images/readmefile-mobileone.png"></td>
