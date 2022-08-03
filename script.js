@@ -21,17 +21,18 @@ function playRound(playerSelection, computerSelection){
     const userScoresPara = document.getElementById('userScoresPara');
     const compScoresPara = document.getElementById('compScoresPara');
 
-     //Show round on console
+     //Show rounds count on page
      roundsPara.innerHTML = 'Round: '+ round;
    
-    //show player and computer choice
+    //declare player and computer choice
     const playerChoice = document.getElementById('playerChoice');
     const computerChoice = document.getElementById('computerChoice');
 
+    //show player and computer choice on page
     playerChoice.innerHTML = 'Player Choice: ' + playerSelection;
     computerChoice.innerHTML = 'Computer Choice: ' + computerSelection;
 
-    //declare and display overall game result, each choice and game over messages
+    //declare overall game result message,  game over message, and each choice message
     let gameResultMessage = document.getElementById('gameResultMessage');
     let gameOverMessage = document.getElementById('gameOverMessage');
     const choiceMessage = document.getElementById('choiceMessage');
@@ -54,11 +55,11 @@ function playRound(playerSelection, computerSelection){
         const finalUserScoresPara = document.getElementById('finalUserScoresPara');
         const finalCompScoresPara = document.getElementById('finalCompScoresPara');
 
-        //display as final scores and display final choices message
+        //display final scores
         finalUserScoresPara.innerHTML =  'Final Player Score: '+ userScore;
         finalCompScoresPara.innerHTML = 'Final Computer Score: '+ computerScore;
 
-        //remove game regular result message and display game result message
+        //remove regular game result message and display game over message
         gameResultMessage.style.display = 'none';
        return  gameOverMessage.innerHTML = 'GAME OVER';
        
@@ -139,9 +140,10 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-    //Keep score of computer and numbers wins 
+    /*Keep score of computer and numbers wins 
+    and returns message based off of who won*/
     function keepScore(){
-        //will display final winner message
+        //display final winner message
         let finalWinnerMessage = document.getElementById('finalWinnerMessage');
 
         if(userScore == computerScore){
@@ -173,11 +175,11 @@ function playRound(playerSelection, computerSelection){
 
 
 
-    //Button resets and restarts game button function
+    //Button resets and restarts game
     function playAgain(){
         const playAgainBtn = document.getElementById('playAgainBtn');
 
-        //initially shows play again button when 5 rounds
+        //shows play again button when 5 rounds
         playAgainBtn.style.display = 'inline-block';
 
         playAgainBtn.addEventListener('click',() => {
@@ -202,11 +204,11 @@ function playRound(playerSelection, computerSelection){
                 return playerSelection = 'scissors'; 
             })
 
-            location.reload(); //reloads the browser and removes console logs
+            location.reload(); //reloads the browser
         })
     }
 
-     //Disable buttons functions
+     //Disable buttons function
      function disableBtns(){
          rpsBtn.style.opacity = '20%';
          rpsBtn.style.pointerEvents = 'none';
