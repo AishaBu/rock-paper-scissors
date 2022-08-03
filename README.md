@@ -41,4 +41,4 @@ JavaScript<br>
 <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons">Scissors icons created by Freepik - Flaticon</a>
 
 #### Odin Project
-[Odin Rock Paper Scissors Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+[Odin Project Rock Paper Scissors Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
