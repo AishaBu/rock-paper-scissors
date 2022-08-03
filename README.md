@@ -13,6 +13,8 @@ This rock, paper, scissors game was made for the Rock, Paper, Scissors assignmen
 <table>
     <tr>
     <td><img src="./rps-images/readmefile-desktoptwo.png"></td>
+    </tr>
+    <tr>
      <td><img src="./rps-images/readmefile-desktopthree.png"></td>
      </tr>
 </table>
