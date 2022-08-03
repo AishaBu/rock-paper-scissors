@@ -7,7 +7,7 @@
 </table>
 
 ### Description
-This rock, paper, scissors game was made for the Rock, Paper, Scissors assignment in the Odin Project. The assignment is to make a rock paper scissors game using HTML, CSS, and JavaScript. While creating this game, I practiced DOM manipulation using JavaScript, and got a better understanding of scope and the use of functions and the return keyword in JavaScript.The game is fully responsive for desktop and mobile sites. 
+This rock, paper, scissors game was made for the Rock, Paper, Scissors assignment in the Odin Project. The assignment is to make a rock paper scissors game using HTML, CSS, and JavaScript. While creating this game, I practiced DOM manipulation using JavaScript, and got a better understanding of scope and the use of functions, and the return keyword in JavaScript.The game is fully responsive for desktop and mobile devices. 
 
 #### Desktop Devices
 <table>
