@@ -68,6 +68,7 @@ body{
     font-family: 'Mouse Memoirs', sans-serif;
     text-shadow: 2px 2px whitesmoke;
     color:black;
+    margin: 30px;
 }
 
 #gameResultMessage{
