@@ -17,11 +17,9 @@ This rock, paper, scissors game was made for the Rock, Paper, Scissors assignmen
 
 #### Mobile Devices
 <table>
-    <tr>
-    <td><img src="./rps-images/readmefile-mobileone.png"></td>
-    <td><img src="./rps-images/readmefile-mobiletwo.png"></td>
-     <td><img src="./rps-images/readmefile-mobilethree.png"></td>
-     </tr>
+    <tr><td><img src="./rps-images/readmefile-mobileone.png"></td></tr>
+    <tr><td><img src="./rps-images/readmefile-mobiletwo.png"></td></tr>
+     <tr><td><img src="./rps-images/readmefile-mobilethree.png"></td></tr>
 </table>
 
 ### Live Site
