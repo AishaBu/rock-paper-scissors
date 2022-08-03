@@ -23,9 +23,8 @@ This rock, paper, scissors game was made for the Rock, Paper, Scissors assignmen
 <table>
     <tr>
     <td><img src="./rps-images/readmefile-mobileone.png"></td>
-     <td><img src="./rps-images/readmefile-mobiletwo.png"></td>
-      <td><img src="./rps-images/readmefile-mobilethree.png"></td>
-     </tr>
+    </tr>
+
 </table>
 
 ### Live Site
