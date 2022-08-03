@@ -10,7 +10,7 @@ function getComputerChoice(){
 
     let userScore = parseInt(0);
     let computerScore = parseInt(0);
-    let round = parseInt(0); 
+    let round = parseInt(1); 
 
 
     //Play a round of game function
@@ -31,13 +31,17 @@ function playRound(playerSelection, computerSelection){
     playerChoice.innerHTML = 'Player Choice: ' + playerSelection;
     computerChoice.innerHTML = 'Computer Choice: ' + computerSelection;
 
-    //declare display game  and game over message
+    //declare and display overall game result, each choice and game over messages
     let gameResultMessage = document.getElementById('gameResultMessage');
     let gameOverMessage = document.getElementById('gameOverMessage');
+    const choiceMessage = document.getElementById('choiceMessage');
 
 
-     //Track round being played
-     if(round === 5) {
+     //Listens for 5 rounds and 5 clicks all together from buttons
+     rpsBtn.addEventListener('click',() => {
+
+        //Track round being played
+     if(round === 6) {
         keepScore();
         disableBtns();
         playAgain();
@@ -49,18 +53,18 @@ function playRound(playerSelection, computerSelection){
          // declare final player and computer scores
         const finalUserScoresPara = document.getElementById('finalUserScoresPara');
         const finalCompScoresPara = document.getElementById('finalCompScoresPara');
-        const choiceMessage = document.getElementById('choiceMessage');
 
         //display as final scores and display final choices message
         finalUserScoresPara.innerHTML =  'Final Player Score: '+ userScore;
         finalCompScoresPara.innerHTML = 'Final Computer Score: '+ computerScore;
-        choiceMessage.innerHTML = 'You chose ' + playerSelection +',' + ' and the computer chose ' + computerSelection;
 
         //remove game regular result message and display game result message
         gameResultMessage.style.display = 'none';
        return  gameOverMessage.innerHTML = 'GAME OVER';
        
     }
+})
+
 
     //If it's a tie
     if(playerSelection === computerSelection){
