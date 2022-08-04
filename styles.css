@@ -142,22 +142,34 @@ body{
     border: none; 
 }
 
-footer, footer a{
+footer{
     background-color: rgb(54, 54, 54);
     width: 100vw;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 20px;
     z-index: 1;
     flex-shrink: 0;
 }
 
+footer p {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer img{
+    background-color: white;
+    border-radius: 60%;
+    border: 1px solid white;
+    margin: 5px;
+}
+
 footer a:hover{
-    color: bisque;
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(360deg) scale(1.2);
+    border: 1px 1px black;
 }
 
 
